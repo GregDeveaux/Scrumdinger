@@ -16,10 +16,6 @@ jobs:
     - name: Clone Otaku Sakuru
       uses: actions/checkout@v3
     
-    - name: Set up Xcode
-      uses: actions/setup-xcode@v2
-      with:
-        xcode-version: '14.1'
         
     - name: Build
       run: xcodebuild -scheme Scrumdinger -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 8' clean build
